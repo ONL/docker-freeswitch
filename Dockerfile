@@ -68,7 +68,7 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
     freeswitch-application-curl \
     freeswitch-application-conference \
     freeswitch-application-callcenter \
-    freeswitch-application-blacklist
+    freeswitch-application-blacklist \
   && yum clean all
 
 RUN usermod -u 5060 freeswitch \
