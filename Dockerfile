@@ -38,10 +38,7 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
     freeswitch-event-format-cdr \
     freeswitch-event-cdr-sqlite \
     freeswitch-endpoint-rtc \
-    freeswitch-codec-vpx \
     freeswitch-codec-theora \
-    freeswitch-codec-siren \
-    freeswitch-codec-silk \
     freeswitch-codec-passthru-g729 \
     freeswitch-codec-passthru-g723_1 \
     freeswitch-codec-passthru-amrwb \
