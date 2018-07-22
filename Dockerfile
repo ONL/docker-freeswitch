@@ -19,7 +19,6 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
     g722_1 \
     freeswitch-xml-curl \
     freeswitch-xml-cdr \
-    freeswitch-timer-posix \
     freeswitch-sounds-music-48000 \
     freeswitch-sounds-music-32000 \
     freeswitch-sounds-music-16000 \
@@ -60,7 +59,7 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
     freeswitch-application-fifo \
     freeswitch-application-enum \
     freeswitch-application-easyroute \
-    freeswitch-application-directory \
+    freeswitch-asrtts-flite \
     freeswitch-application-db \
     freeswitch-application-curl \
     freeswitch-application-conference \
