@@ -37,6 +37,7 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
     freeswitch-event-format-cdr \
     freeswitch-event-cdr-sqlite \
     freeswitch-endpoint-rtc \
+    freeswitch-endpoint-dingaling \
     freeswitch-codec-theora \
     freeswitch-codec-passthru-g729 \
     freeswitch-codec-passthru-g723_1 \
@@ -70,13 +71,10 @@ RUN yum install -y http://files.freeswitch.org/freeswitch-release-1-6.noarch.rpm
 RUN usermod -u 5060 freeswitch \
   && chown -R freeswitch /var/run/freeswitch
 
-EXPOSE 5060/tcp 5060/udp 5080/tcp 5080/udp
-EXPOSE 5066/tcp 7443/tcp
-EXPOSE 8021/tcp
+EXPOSE 5060/tcp 5060/udp 5061 5080/tcp 5081/udp
 EXPOSE 64535-65535/udp
 
-VOLUME /etc/freeswitch
-VOLUME /var/lib/freeswitch/
+VOLUME ["/etc/freeswitch", "/var/lib/freeswitch"]
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 CMD ["/usr/bin/freeswitch", "-u freeswitch"]
